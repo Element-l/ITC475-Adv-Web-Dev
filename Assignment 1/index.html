@@ -5,9 +5,15 @@
         <title> Mega Travel </title>
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body>
+    <body onload="timeCount();">
         <div class="header">
-            <img src="./images/megatravellogo.png" id="logo">
+            <div class="headeritem">
+                <img src="./images/megatravellogo.png" id="logo">
+            </div>
+            <div class="headeritem">
+                <div id="clock"></div>
+                <img src="./images/moon.png" id="sunmoon">
+            </div>
         </div>
         <div class="headerseparator"></div>
         <div class="navbox"> 
@@ -68,6 +74,7 @@
                 </div>
             </div>
         </div>
+        <script src='welcome.js'></script>
     </body>
     <footer>
         <p>Copyright Protected All rights reserved</p>
