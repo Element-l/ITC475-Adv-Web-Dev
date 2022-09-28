@@ -22,7 +22,7 @@ function timeCount() {
     document.getElementById("clock").innerHTML = 
   hour+":"+minute+":"+second+" "+morning;
   }
-  else if ((hour >= 12) && (hour <= 17 && minute < 1)) {
+  else if ((hour >= 12) && (hour <= 17)) {
     document.getElementById("clock").innerHTML = 
   hour+":"+minute+":"+second+" "+afternoon;
   }
@@ -31,7 +31,7 @@ function timeCount() {
   hour+":"+minute+":"+second+" "+evening;
   }
 
-  if((hour >= 6) && (hour <= 18 && minute < 1)){
+  if((hour >= 6) && (hour <= 18)){
     document.getElementById("sunmoon").src="./images/sun.png";
     console.log("it is day")
   }
