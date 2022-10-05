@@ -27,27 +27,63 @@
         <p class="textdesc">
           We would love to know more about your travel plans. Please fill out this contact form to get in touch with a travel agent.
         </p>
-        <div class="activities">
-          <div class="dropdown">
-            <button class="dropbtn">Dropdown ▼</button>
-            <div class="dropdown-content">
-              <a onclick="NZ();">New Zealand</a>
-              <a onclick="Maldives();">Maldives, South Asia</a>
-              <a onclick="Venice();">Venice, Italy</a>
-              <a onclick="Cancun();">Cancun</a>
+        <form class="inputform" name="inputform" onsubmit="return false">
+          <div id="submit">
+            <input type="submit" value="Submit" onclick="validateForm();">
+            <div id="error">
+              <p></p>
             </div>
           </div>
-          <div id="activitydisplay">
-            <div id="activitylist">
-              <div id="location">
+          <div>
+            <input type="reset" value="Clear">
+          </div>
+          <div>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+          </div>
+          <div>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br>
+          </div>
+          <div>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" value=""><br>
+          </div>
+          <div>
+            <label for="phone">Enter your phone number:</label><br>
+            <input type="tel" id="phone" name="phone"><br>
+          </div>
+          <div>
+            <label for="quantity">How many children and adults are traveling:</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" max="1000"><br>
+          </div>
+          <div>
+            <label for="date">Date of travel:</label><br>
+            <input type="date" id="date" name="date"><br><br>
+          </div>
+          <div class="activities">
+            <div class="dropdown">
+              <button class="dropbtn">Dropdown ▼</button>
+              <div class="dropdown-content">
+                <a onclick="NZ();">New Zealand</a>
+                <a onclick="Maldives();">Maldives, South Asia</a>
+                <a onclick="Venice();">Venice, Italy</a>
+                <a onclick="Cancun();">Cancun</a>
+              </div>
+            </div>
+            <div id="activitydisplay">
+              <div id="activitylist">
+                <div id="location">
 
-              </div>
-              <div id="checkboxes">
-                
+                </div>
+                <div id="checkboxes">
+                  
+                </div>
               </div>
             </div>
           </div>
-        </div>
+
+        </form>
       </div>
     </div>
     <script src='activityselector.js'></script>
