@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="test/html;charset=utf-8" http-equiv="Content-Type">
+        <title> Mega Travel Contact Agent </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <div class="header">
+          <img src="./images/megatravellogo.png" id="logo">
+          <div id="clock"></div>
+      </div>
+      <div class="headerseparator"></div>
+      <div class="navbox"> 
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about us.html">About Us</a></li>
+              <li><a href="contact.html">Contact Agent</a></li>
+          </ul>
+      </div>
+      <footer>
+        <p>Copyright Protected All rights reserved</p>
+    </footer>
+    <div class="main">
+      <div class="description">
+        <h1>Contact an Agent</h1>
+        <p class="textdesc">
+          We would love to know more about your travel plans. Please fill out this contact form to get in touch with a travel agent.
+        </p>
+        <form class="inputform" name="inputform" id="inputform" action="confirm.php" method="post">
+          <div id="submit">
+            <input type="button" value="Submit" onclick="validateForm();">
+            <div id="error">
+              <p></p>
+            </div>
+          </div>
+          <div>
+            <input type="reset" value="Clear">
+          </div>
+          <div>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+          </div>
+          <div>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br>
+          </div>
+          <div>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" value=""><br>
+          </div>
+          <div>
+            <label for="phone">Enter your phone number:</label><br>
+            <input type="tel" id="phone" name="phone"><br>
+          </div>
+          <div>
+            <label for="quantity">How many children and adults are traveling:</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" max="1000"><br>
+          </div>
+          <div>
+            <label for="date">Date of travel:</label><br>
+            <input type="date" id="date" name="date"><br><br>
+          </div>
+          <div class="activities">
+            <div class="dropdown">
+              <div class="dropbtn">Dropdown ▼</div>
+              <div class="dropdown-content">
+                <a onclick="NZ();">New Zealand</a>
+                <a onclick="Maldives();">Maldives, South Asia</a>
+                <a onclick="Venice();">Venice, Italy</a>
+                <a onclick="Cancun();">Cancun</a>
+              </div>
+            </div>
+            <div id="activitydisplay">
+              <div id="activitylist">
+                <div id="locationselect">
+
+                </div>
+                <div id="checkboxes">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    
+    <script src='activityselector.js'></script>
+    </body>
