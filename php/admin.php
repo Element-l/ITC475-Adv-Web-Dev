@@ -26,6 +26,8 @@
 </html>
 
 <?php
+session_start();
+if ($_SESSION["auth"] == 1){
 $servername = "localhost";
 $username = "root";
 
@@ -51,5 +53,12 @@ echo "Destination: ",$row["usr_destination"],"<br/>";
 echo "Travel Date: ",$row["usr_date"],"<br/>";
 echo "Interested Activities: ", $row["usr_activities"];
 echo "<br/><br/>";
+$_SESSION["auth"] = 0;
 }
+}
+else{
+    header('Location: http://localhost/test/login.php');
+    die();
+}
+
 ?>
